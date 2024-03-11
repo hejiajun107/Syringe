@@ -653,6 +653,9 @@ void SyringeDebugger::FindDLLs()
 				} else if(auto const hosts = DLL.FindSection(".syexe00")) {
 					canLoad = CanHostDLL(DLL, *hosts);
 				}
+
+				canLoad = true;
+				
 			}
 
 			if(canLoad) {
